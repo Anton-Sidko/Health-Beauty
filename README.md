@@ -1,2 +1,3 @@
-# Health-Beauty
-website massage salon
+# Health & Beauty
+
+Simple landing page for massage salon. Design by Yulia Fedorova.
