@@ -8,8 +8,7 @@
  });
  // ...
 
-
-/* Toggle between adding and removing the "responsive" class when the user clicks on the icon */
+ /* Toggle between adding and removing the "responsive" class when the user clicks on the icon */
 
 function togglingNavbar() {
     var x = document.getElementById("site-nav-ipad");
@@ -23,6 +22,12 @@ function togglingNavbar() {
 
 
 
+
+
+
+/*Initialize lazyYT*/
+$('.lazyYT').lazyYT();
+// 
 
 // Keep position nav-list elements at nav-link:hover
 
@@ -85,5 +90,76 @@ $(document).ready(function(){
 })
 //
 
-/*Initialize lazyYT*/
-$('.lazyYT').lazyYT();
+/*Toggle between hiding and showing the dropdown answers */
+
+function dropAnswer() {
+    var target = event.target.id;
+    var questions = document.getElementsByClassName("drop-question");
+    
+    if (target == "first-dropdown") {
+        document.getElementById("first-answer").classList.add("show");    
+        
+        for (var i = 0; i < questions.length; i++) {
+            questions[i].classList.add("hide");
+        }     
+    }
+
+    else if (target == "second-dropdown") {
+        document.getElementById("second-answer").classList.add("show");    
+        
+        for (var i = 0; i < questions.length; i++) {
+            questions[i].classList.add("hide");
+        }     
+    }
+
+    else if (target == "third-dropdown") {
+        document.getElementById("third-answer").classList.add("show");    
+        
+        for (var i = 0; i < questions.length; i++) {
+            questions[i].classList.add("hide");
+        }     
+    }
+
+    else if (target == "fourth-dropdown") {
+        document.getElementById("fourth-answer").classList.add("show");    
+        
+        for (var i = 0; i < questions.length; i++) {
+            questions[i].classList.add("hide");
+        }     
+    }
+
+    else if (target == "fifth-dropdown") {
+        document.getElementById("fifth-answer").classList.add("show");    
+        
+        for (var i = 0; i < questions.length; i++) {
+            questions[i].classList.add("hide");
+        }     
+    }
+}
+// 
+
+/* Hide dropdown answers when user click anywhere*/
+
+document.onclick = function(e) {    
+    var target = event.target.id;
+    var questions = document.getElementsByClassName("drop-question");
+
+    if (target !== "first-dropdown" && target !== "second-dropdown"
+        && target !== "third-dropdown" && target !== "fourth-dropdown"
+        && target !== "fifth-dropdown") {        
+        var answers=document.getElementsByClassName("drop-content");        
+        
+        for (var i = 0; i < answers.length; i++) {
+        var answer = answers[i];
+        
+            if (answer.classList.contains('show')) {
+                answer.classList.remove('show');
+            
+                for (var i = 0; i < questions.length; i++) {
+                    questions[i].classList.remove("hide");
+                }
+            }       
+        };
+    };
+}
+// 
