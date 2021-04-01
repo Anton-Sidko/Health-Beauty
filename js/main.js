@@ -140,7 +140,7 @@ function dropAnswer() {
 
 /* Hide dropdown answers when user click anywhere*/
 
-document.onclick = function(e) {    
+document.onclick = function() {    
     var target = event.target.id;
     var questions = document.getElementsByClassName("drop-question");
 

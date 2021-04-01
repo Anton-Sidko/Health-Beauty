@@ -406,27 +406,6 @@ main {
     margin: 0 auto;
 }
 
-    /*Background images*/
-
-    .back-img {
-        position: absolute;
-        z-index: -1;
-    }
-
-    #services-back {
-        top: -180px;        
-        z-index: -2;
-    }
-
-    #back-flowers-serv {
-        top: -660px;       
-    }
-
-    #back-flowers-serv2 {
-        top: 520px;
-        right: 0;        
-    }
-
 #services-introduction-wrapper {
     margin: 140px 150px 120px 150px;
 }
@@ -585,11 +564,6 @@ main {
     }
     /**/
 
-#back-flowers-about {
-    top: 450px;
-    left: 0;   
-}
-
 /* FAQ styles */
 
 #faq-wrapper {
@@ -611,33 +585,27 @@ main {
 
 #faq {
     margin-left: 60px;
-
 }
 
 /* Dropdown FAQ */
 
 .dropdown {
     position: relative;
-     margin-bottom: 22px;
+    margin-bottom: 22px;
     color: #656F57;
-
     width: 617px;
-
 }
 
-    
-
     .dropdown p {
-        margin: 0;
-        padding-left: 12px;
+        margin: 0;        
     }
 
-.drop-question {
-   
+.drop-question {   
     border: 1px solid #656F57;
     border-radius: 10px;  
     height: 44px;    
-    line-height: 44px;    
+    line-height: 44px;
+    padding-left: 12px;    
 }
 
     .drop-question:hover,
@@ -657,14 +625,70 @@ main {
     }
 
 .drop-content {
-    display: none;
-    position: absolute;
-   
+    display: none;        
+    font-size: 18px;
+    padding: 35px 35px 50px 45px;    
     color: #000;
-    
- 
+    border: 1px solid #656F57;
+    border-radius: 10px; 
 }
 
+    .drop-content::after {
+        content: "\f0d8";
+        font-family: 'Font Awesome 5 Free', 'Font Awesome 5 Brands';
+        font-weight: 900;
+        font-size: 30px; 
+        opacity: 0.7;           
+        position: absolute;
+        right: 15px;
+        top: 0;        
+    }
+
+    .drop-content span {
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 3;
+    }
+
+    .drop-content:not(.drop-content-first) {
+        position: absolute;        
+        top: -22px;
+    }
+
+/* Contacts frame styles */
+
+#contacts-frame-wrapper {
+    position: relative;
+    width: 1440px;    
+    margin: 90px auto 0 auto;
+}
+
+.offer-wrapper {
+    padding: 90px 585px 140px 150px;
+    
+}
+
+    .offer-wrapper h1, p {
+        text-align: left;
+    }
+
+    .offer-wrapper p {
+        width: 470px;        
+    }
+
+    .offer-wrapper p:nth-child(3) {
+        margin-bottom: 80px;        
+    }
+
+#contacts-wrapper {
+    margin: 150px 150px 100px 150px;
+}
+
+#map {
+    width: 580px;
+    height: 600px;
+    border: 1px solid #656F57;
+}    
 
 
 
@@ -674,16 +698,47 @@ main {
 
 
 
+
+
+/* Background images styles */
+
+.back-img {
+    position: absolute;
+    z-index: -1;
+}
+
+#services-back {
+    top: -180px;        
+    z-index: -2;
+}
+
+#back-flowers-serv {
+    top: -660px;       
+}
+
+#back-flowers-serv2 {
+    top: 520px;
+    right: 0;        
+}
+
+#back-flowers-about {
+    top: 450px;
+    left: 0;   
+}
+
+#back-flowers-contacts {
+    bottom: -200px;
+    right: 0;
+}
 
 /*Scroll up button*/
 
 .scrollup{
     width: 45px;
-    height: 45px;
-    opacity: 0.7;
+    height: 45px;    
     position: fixed;
     bottom: 50px;
-    right: 65px;
+    right: 70px;
     display: none;    
     background: url('../images/scroll-up.svg') no-repeat;
 }
