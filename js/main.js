@@ -25,9 +25,9 @@ function togglingNavbar() {
 
 
 
-/*Initialize lazyYT*/
-$('.lazyYT').lazyYT();
-// 
+// /*Initialize lazyYT*/
+// $('.lazyYT').lazyYT();
+// // 
 
 // Keep position nav-list elements at nav-link:hover
 
@@ -163,3 +163,4 @@ document.onclick = function() {
     };
 }
 // 
+

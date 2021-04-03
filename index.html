@@ -14,11 +14,9 @@
 		<link rel="stylesheet" href="styles/aos.css">
 		<!--  -->
 
-		<link rel="stylesheet" href="styles/lazyYT.css">
 		<link rel="stylesheet" href="styles/fonts/fontawesome/css/all.min.css">
 
-		<!-- JQuery -->
-		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+		
 	</head>
 
 	<body>
@@ -225,10 +223,10 @@
 				<div class="about-us">
 					<h1> Часто задаваемые вопросы</h1>
 
-<!-- Insert video id and video title -->
+					<!-- Video from youtube -->
+
 					<div id="faq-wrapper">
-						<!-- <div class="lazyYT" data-youtube-id="#" data-width="465" data-height="309"> Заголовок видео</div> -->
-						<div class="massage-video"></div>
+						<iframe width="465" height="309" src="https://www.youtube.com/embed/hFM9V8W4IIw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>			
 
 						<div id="faq">
 							<div class="dropdown" onclick="dropAnswer()">
@@ -301,8 +299,9 @@
 	<!--  Scroll up button-->
 	<a href="#" class="scrollup"></a>
 	
-	<script src="js/aos.js"></script>
-	<script src="js/lazyYT.js"></script>
+	<!-- Connect scripts -->
+	<script src="js/jquery.min.js"></script>
+	<script src="js/aos.js"></script>	
 	<script src="js/main.js"></script>	
 
 	</body>
