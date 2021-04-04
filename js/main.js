@@ -22,12 +22,18 @@ function togglingNavbar() {
 
 
 
+ // Initialization owl-carousel
+
+$(document).ready(function(){
+  $('#owl-carousel-1').owlCarousel({
+    items: 1,
+    dotsEach: 1,
+    nav: true,
+    
+  });
+});
 
 
-
-// /*Initialize lazyYT*/
-// $('.lazyYT').lazyYT();
-// // 
 
 // Keep position nav-list elements at nav-link:hover
 
@@ -48,11 +54,11 @@ function rechangeMarginAbout() {
 }
 
 function changeMarginRew() {
-  document.getElementById('nav-reviews').style.marginLeft = '58px';
+  document.getElementById('nav-testimonials').style.marginLeft = '58px';
 }
 
 function rechangeMarginRew() {
-  document.getElementById('nav-reviews').style.marginLeft = '68px';
+  document.getElementById('nav-testimonials').style.marginLeft = '68px';
 }
 
 function changeMarginCont() {
@@ -101,7 +107,10 @@ function dropAnswer() {
         
         for (var i = 0; i < questions.length; i++) {
             questions[i].classList.add("hide");
-        }     
+        }
+
+        // Keep position testimonials-wrapper
+        document.getElementById("faq-all-wrapper").style.marginBottom = '88px';
     }
 
     else if (target == "second-dropdown") {
@@ -109,7 +118,10 @@ function dropAnswer() {
         
         for (var i = 0; i < questions.length; i++) {
             questions[i].classList.add("hide");
-        }     
+        }
+
+        // Keep position testimonials-wrapper
+        document.getElementById("faq-all-wrapper").style.marginBottom = '191px';     
     }
 
     else if (target == "third-dropdown") {
@@ -117,7 +129,10 @@ function dropAnswer() {
         
         for (var i = 0; i < questions.length; i++) {
             questions[i].classList.add("hide");
-        }     
+        }
+
+        // Keep position testimonials-wrapper
+        document.getElementById("faq-all-wrapper").style.marginBottom = '191px';     
     }
 
     else if (target == "fourth-dropdown") {
@@ -125,7 +140,10 @@ function dropAnswer() {
         
         for (var i = 0; i < questions.length; i++) {
             questions[i].classList.add("hide");
-        }     
+        }
+
+        // Keep position testimonials-wrapper
+        document.getElementById("faq-all-wrapper").style.marginBottom = '191px';     
     }
 
     else if (target == "fifth-dropdown") {
@@ -133,7 +151,10 @@ function dropAnswer() {
         
         for (var i = 0; i < questions.length; i++) {
             questions[i].classList.add("hide");
-        }     
+        }
+
+        // Keep position testimonials-wrapper
+        document.getElementById("faq-all-wrapper").style.marginBottom = '191px';     
     }
 }
 // 
@@ -158,6 +179,9 @@ document.onclick = function() {
                 for (var i = 0; i < questions.length; i++) {
                     questions[i].classList.remove("hide");
                 }
+
+                // Return margin to testimonials-wrapper back
+                document.getElementById("faq-all-wrapper").style.marginBottom = '170px';
             }       
         };
     };

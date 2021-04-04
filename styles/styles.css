@@ -500,7 +500,7 @@ main {
 }
 
 .about-us {
-    margin: 0 150px 190px 150px;
+    margin: 0 150px 170px 150px;
 }
 
 /*Our employees*/
@@ -660,7 +660,7 @@ main {
 #contacts-frame-wrapper {
     position: relative;
     width: 1440px;    
-    margin: 90px auto 0 auto;
+    margin: 100px auto 0 auto;
 }
 
 .offer-wrapper {
@@ -689,6 +689,136 @@ main {
     height: 600px;
     border: 1px solid #656F57;
 }
+
+/*Testimonials styles*/
+
+#testimonials-wrapper {
+    width: 1440px;
+}
+
+.testimonial {
+    width: 475px;
+    padding: 40px 30px 30px 40px;   
+    background: #fff2f2;
+    border: 1px solid #656f57;
+    border-radius: 10px;
+}
+
+.client-wrap {
+    display: flex;
+    margin-left: 15px;
+}
+
+.client-photo {
+    width: 58px;
+    height: auto;
+}
+
+.testimonial-p {
+    font-weight: 500;
+    font-size: 22px;
+    line-height: 1.2;
+    margin: 10px 0 10px 40px;
+}
+
+.b-a-photo-wrapper {    
+    position: relative;
+    margin-left: 80px;
+
+}
+
+.b-a-photo,
+.b-a-text,
+#increase-photo {
+    position: absolute;
+}
+
+#before-photo {
+    bottom: 0;
+    left: 0;
+}
+
+#after-photo {
+    top: 0;
+    left: 80px;
+}
+
+#before-text {
+    bottom: 5px;
+    left: -15px;
+}
+
+#after-text {
+    bottom: 25px;
+    left: 60px;
+}
+
+#increase-photo {
+    bottom: 180px;
+    left: 180px;
+    font-size: 30px;
+    color: #4f514d;
+}    
+
+/*Carousel styles*/
+
+.owl-carousel {    
+    width: 90%;
+    margin: 80px auto;
+}
+
+.carousel-item {
+    display: flex;
+    position: relative;
+    width: 100%;    
+    margin: 0 auto 0 200px; 
+    cursor: grab;  
+    overflow-wrap: break-word;
+}
+
+/* Container with markers */
+.owl-dots {
+    display: block;
+    text-align: center;
+    margin-top: 65px;
+}
+
+    /* Marker page */
+    .owl-carousel button.owl-dot {
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background: #656f57;
+        margin: 0 10px;
+    }
+
+    /* Active marker */
+    .owl-carousel button.owl-dot.active {
+        width: 15px;
+        height: 15px;
+    }
+
+/*Caouresl arrow*/
+.owl-nav {
+    position: absolute;
+    text-align: center;   
+    font-size: 5em;
+    top: 130px;
+    left: 130px;
+}
+    .owl-nav button.disabled {
+        color: black;
+        opacity: .5;
+    }
+
+.owl-next {
+    margin-left: 1010px;
+}
+
+
+
+
+
 
 
 
@@ -740,6 +870,7 @@ main {
     right: 70px;
     display: none;    
     background: url('../images/scroll-up.svg') no-repeat;
+    z-index: 1;
 }
 /**/    
     
