@@ -1,39 +1,47 @@
- // Initialization AOS
- 
- AOS.init({
- 	duration: 500,
- 	easing: 'slide',
- 	once: true,
- 	disable: 'mobile'
- });
- // ...
-
- /* Toggle between adding and removing the "responsive" class when the user clicks on the icon */
-
-function togglingNavbar() {
-    var x = document.getElementById("site-nav-ipad");
-    if (x.className === "topnav") {
-        x.className += "responsive";
-    } else {
-        x.className = "topnav";
-    }
-} 
-// ...
-
-
-
- // Initialization owl-carousel
+// Initialization owl-carousel
 
 $(document).ready(function(){
-  $('#owl-carousel-1').owlCarousel({
+  $('#owl-carousel-testimonials').owlCarousel({
     items: 1,
     dotsEach: 1,
     nav: true,
-    
   });
 });
 
+$(document).ready(function(){
+  $('#owl-carousel-masters').owlCarousel({
+    items: 2,
+    dotsEach: 1,
+    nav: true,
+    margin: 0,     
+  });
+});
 
+// Initialization fancy-box
+
+$('[data-fancybox="before-after-photo"]').fancybox({    
+    smallBtn: true,
+    animationEffect: "zoom-in-out",
+    animationDuration: 600,
+    clickSlide: "close",
+    arrows: false,
+    infobar: false,
+    fitToView: true,       
+});
+
+$('.modal-link').fancybox({ 
+    animationEffect: "fade",
+    animationDuration: 600,
+    'width': 790,
+    'height': 650,
+
+});
+
+// Sent message when form has been successfully sent and close modal form
+function triggerClick() {
+  $.fancybox.defaults.closeExisting = true;
+  $('#hidden-modal-link').trigger('click');
+}
 
 // Keep position nav-list elements at nav-link:hover
 
@@ -45,6 +53,14 @@ function rechangeMarginServ() {
   document.getElementById('nav-services').style.marginLeft = '144px';
 }
 
+function changeMarginServFoot() {
+  document.getElementById('nav-services-foot').style.marginLeft = '72px';
+}
+
+function rechangeMarginServFoot() {
+  document.getElementById('nav-services-foot').style.marginLeft = '80px';
+}
+
 function changeMarginAbout() {
   document.getElementById('nav-about').style.marginLeft = '61px';
 }
@@ -53,12 +69,28 @@ function rechangeMarginAbout() {
   document.getElementById('nav-about').style.marginLeft = '68px';
 }
 
+function changeMarginAboutFoot() {
+  document.getElementById('nav-about-foot').style.marginLeft = '73.5px';
+}
+
+function rechangeMarginAboutFoot() {
+  document.getElementById('nav-about-foot').style.marginLeft = '80px';
+}
+
 function changeMarginRew() {
   document.getElementById('nav-testimonials').style.marginLeft = '58px';
 }
 
 function rechangeMarginRew() {
   document.getElementById('nav-testimonials').style.marginLeft = '68px';
+}
+
+function changeMarginRewFoot() {
+  document.getElementById('nav-testimonials-foot').style.marginLeft = '70.5px';
+}
+
+function rechangeMarginRewFoot() {
+  document.getElementById('nav-testimonials-foot').style.marginLeft = '80px';
 }
 
 function changeMarginCont() {
@@ -101,6 +133,7 @@ $(document).ready(function(){
 function dropAnswer() {
     var target = event.target.id;
     var questions = document.getElementsByClassName("drop-question");
+    var browserMinWidth = parseInt($('.header-wrapper').css('width'), 10);    
     
     if (target == "first-dropdown") {
         document.getElementById("first-answer").classList.add("show");    
@@ -110,7 +143,9 @@ function dropAnswer() {
         }
 
         // Keep position testimonials-wrapper
-        document.getElementById("faq-all-wrapper").style.marginBottom = '88px';
+        if (browserMinWidth > 1200) {
+            document.getElementById("faq-all-wrapper").style.marginBottom = '88px';
+        }  
     }
 
     else if (target == "second-dropdown") {
@@ -121,7 +156,9 @@ function dropAnswer() {
         }
 
         // Keep position testimonials-wrapper
-        document.getElementById("faq-all-wrapper").style.marginBottom = '191px';     
+        if (browserMinWidth > 1200) {
+            document.getElementById("faq-all-wrapper").style.marginBottom = '191px';
+        }         
     }
 
     else if (target == "third-dropdown") {
@@ -132,7 +169,9 @@ function dropAnswer() {
         }
 
         // Keep position testimonials-wrapper
-        document.getElementById("faq-all-wrapper").style.marginBottom = '191px';     
+        if (browserMinWidth > 1200) {
+            document.getElementById("faq-all-wrapper").style.marginBottom = '191px';
+        }         
     }
 
     else if (target == "fourth-dropdown") {
@@ -143,7 +182,9 @@ function dropAnswer() {
         }
 
         // Keep position testimonials-wrapper
-        document.getElementById("faq-all-wrapper").style.marginBottom = '191px';     
+        if (browserMinWidth > 1200) {
+            document.getElementById("faq-all-wrapper").style.marginBottom = '191px';
+        }     
     }
 
     else if (target == "fifth-dropdown") {
@@ -154,7 +195,9 @@ function dropAnswer() {
         }
 
         // Keep position testimonials-wrapper
-        document.getElementById("faq-all-wrapper").style.marginBottom = '191px';     
+        if (browserMinWidth > 1200) {
+            document.getElementById("faq-all-wrapper").style.marginBottom = '191px';
+        }    
     }
 }
 // 
@@ -186,5 +229,17 @@ document.onclick = function() {
         };
     };
 }
+// 
+
+// Toggling nav-bar
+
+function togglingNavbar() {
+    var x = document.getElementById("site-nav-mobile");
+    if (x.className === "topnav") {
+        x.className += " toggle-nav-bar";
+    } else {
+        x.className = "topnav";
+    }
+} 
 // 
 

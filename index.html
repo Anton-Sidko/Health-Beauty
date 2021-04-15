@@ -8,12 +8,8 @@
 		<meta name="referrer" content="unsafe-url">
 
 		<link rel="shortcut icon" type="image/png" href="favicon.png">
-		
-		<!--  -->
-		<link rel="stylesheet" href="styles/aos.css">
-		<!--  -->
-
-		<link rel="stylesheet" href="styles/fonts/fontawesome/css/all.min.css">	
+		<link rel="stylesheet" href="styles/fonts/fontawesome/css/all.min.css">
+		<link rel="stylesheet" href="styles/jquery.fancybox.min.css">
 		<link rel="stylesheet" href="styles/owl.carousel.min.css">
 		<link rel="stylesheet" href="styles/owl.theme.default.min.css">	
 		<link rel="stylesheet" href="styles/styles.css">
@@ -37,21 +33,48 @@
 			<div class="header-wrapper">
 				
 				<!-- Nav bar for desktop version -->
-				<div class="nav-wrapper">
-					<img src="images/lotus-logo.svg" alt="lotus-logo">
+				<div class="nav-wrapper" id="nav-wrapper-desktop">
+					<img class="logo" src="images/lotus-logo.svg" alt="lotus-logo">
+
 					<nav class="top-nav" id="site-nav">
-						<ul id="site-nav-list">							
-							<li class="nav-list"><a class="nav-link" id="location"href="#"> Киев</a></li>
+						<ul id="site-nav-list-head">						
+							<li class="nav-list"><a class="nav-link" id="location" href="#map"> Киев</a></li>
 							<li class="nav-list" id="nav-services"><a class="nav-link" href="#services-wrapper" onmouseover="changeMarginServ()" onmouseout="rechangeMarginServ()"> Услуги</a></li>
 							<li class="nav-list" id="nav-about"><a class="nav-link" href="#about-us-wrapper" onmouseover="changeMarginAbout()" onmouseout="rechangeMarginAbout()"> О нас</a></li>
 							<li class="nav-list" id="nav-testimonials"><a class="nav-link" href="#testimonials-wrapper" onmouseover="changeMarginRew()" onmouseout="rechangeMarginRew()"> Отзывы</a></li>
 							<li class="nav-list" id="nav-contacts"><a class="nav-link" href="#contacts-wrapper" onmouseover="changeMarginCont()" onmouseout="rechangeMarginCont()"> Контакты</a></li>
-							<li class="nav-list" id="phone-number"><a class="nav-link" href="#" onmouseover="changeMarginNumber()" onmouseout="rechangeMarginNumber()"> +38 (050) 123 45 67</a></li>
+							<li class="nav-list" id="phone-number"><a class="nav-link" href="tel:+3805012345XX" onmouseover="changeMarginNumber()" onmouseout="rechangeMarginNumber()"> +38 (050) 123 45 67</a></li>
 						</ul>
 					</nav>										
 				</div>
 
 
+
+
+
+
+
+
+				<!-- Nav bar for mobile version -->
+				<div class="nav-wrapper" id="nav-wrapper-mobile">
+					<img class="logo" src="images/lotus-logo.svg" alt="lotus-logo">
+					<a class="nav-link" id="location" href="#map"> Киев</a>
+					<a class="nav-link" id="bars-btn" href="javascript:void(0);" onclick="togglingNavbar()"><i class="fas fa-bars"></i></a>
+					
+					<nav class="top-nav" id="site-nav-mobile">		
+						<ul id="site-nav-list-head-mobile">			
+							<li class="nav-list-mobile" id="nav-services"><a class="nav-link" href="#services-wrapper" onmouseover="changeMarginServ()" onmouseout="rechangeMarginServ()"> Услуги</a></li>
+							<li class="nav-list-mobile" id="nav-about"><a class="nav-link" href="#about-us-wrapper" onmouseover="changeMarginAbout()" onmouseout="rechangeMarginAbout()"> О нас</a></li>
+							<li class="nav-list-mobile" id="nav-testimonials"><a class="nav-link" href="#testimonials-wrapper" onmouseover="changeMarginRew()" onmouseout="rechangeMarginRew()"> Отзывы</a></li>
+							<li class="nav-list-mobile" id="nav-contacts"><a class="nav-link" href="#contacts-wrapper" onmouseover="changeMarginCont()" onmouseout="rechangeMarginCont()"> Контакты</a></li>
+							<ul class="mobile-messenger-list">
+								<li class="messenger-list"> <a href="viber://add?number=3805012345XX" class="messenger-link"> <i class="fab fa-viber viber-mobile"></i> </a></li>
+								<li class="messenger-list"> <a href="whatsapp://send?phone=+3805012345XX" class="messenger-link"> <i class="fab fa-whatsapp"></i> </a></li>
+								<li class="messenger-list"> <a href="tg://resolve?domain=health-beauty" class="messenger-link"> <i class="fab fa-telegram-plane"></i> </a></li>
+							</ul>							
+						</ul>
+					</nav>										
+				</div>
 			</div>
 		</header>
 
@@ -65,23 +88,25 @@
 				
 				<div class="page-title-wrap">
 				    <h2 class="page-title"> Салон авторского массажа</h2>
-					<h1 id="salon-name"> Health </br><span> & Beauty</span></h1>
-					<p class="main-offer"> Превратим твои мечты об идеальной фигуре в реальность! Первое посещение со скидкой 50%</p>
-					<a href="#" class="signup-button"> Записаться</a>
+					<h1 id="salon-name"> Health<span> & Beauty</span></h1>
+					<p class="main-offer"> Превратим твои мечты об идеальной фигуре в реальность!</p> 
+					<p class="main-offer">Первое посещение со скидкой 50%</p>
+					<a data-src="#modal-form" class="signup-button modal-link"> Записаться</a>
 				</div>
 
 				<picture class="main-frame-pic">
 					<source srcset="images/main-frame-photo.png" media="(min-width: 769px)">
 					<source srcset="images/main-frame-photo-768w.png" media="(min-width: 376px)">
 					<source srcset="images/main-frame-photo-375w.png" media="(max-width: 375px)">
-					<img src="images/main-frame-photo.png" alt="girl relaxing with massage">					
+					<img src="images/main-frame-photo.png" alt="girl relaxing with massage">				
 				</picture>
 
 				<div class="messenger-wrapper">
 					<ul>
-						<li> <a href="#" class="messemger-link"> <i class="fab fa-viber"></i> </a></li>
-						<li> <a href="#" class="messemger-link"> <i class="fab fa-whatsapp"></i> </a></li>
-						<li> <a href="#" class="messemger-link"> <i class="fab fa-instagram"></i> </a></li>
+						<li class="messenger-list"> <a href="viber://add?number=3805012345XX" class="messenger-link"> <i class="fab fa-viber viber-mobile"></i> </a></li>
+						<li class="messenger-list"> <a href="viber://chat?number=+3805012345XX" class="messenger-link"> <i class="fab fa-viber viber-pc"></i> </a></li>
+						<li class="messenger-list"> <a href="whatsapp://send?phone=+3805012345XX" class="messenger-link"> <i class="fab fa-whatsapp"></i> </a></li>
+						<li class="messenger-list"> <a href="tg://resolve?domain=health-beauty" class="messenger-link"> <i class="fab fa-telegram-plane"></i> </a></li>
 					</ul>					
 				</div>				
 			</div>
@@ -94,6 +119,10 @@
 				<img class="back-img" src="images/background/services-back.svg" id="services-back" alt="">
 				<img class="back-img" src="images/background/back-flowers-serv.svg" id="back-flowers-serv" alt="">
 				<img class="back-img" src="images/background/back-flowers-serv2.svg" id="back-flowers-serv2" alt="">
+				<img class="back-img" src="images/background/back-flowers-serv3.svg" id="back-flowers-serv3" alt="">
+				<img class="back-img" src="images/background/back-flowers-serv4.svg" id="back-flowers-serv4" alt="">
+				<img class="back-img" src="images/background/back-flowers-serv5.svg" id="back-flowers-serv5" alt="">
+				<img class="back-img" src="images/background/services-back2.svg" id="services-back2" alt="">
 
 				<div id="services-introduction-wrapper">
 					<h1> Время привести себя в порядок!</h1>
@@ -102,7 +131,13 @@
 							<p> Добро пожаловать в мир красоты и гармонии! Health & Beauty - это не просто массажный салон, это общество красивых и уверенных в себе людей. Салон Health & Beauty создан для Вас – так как мы ценим и любим наших клиентов.</p>
 							<p> В своей работе мы стремимся каждого, обратившегося к нам, сделать нашим постоянным клиентом. Приходя в салон Health & Beauty, Вы можете быть уверены: мы будем работать с полной самоотдачей!</p>
 						</div>
-						<img src="images/services-blurred-woman-desktop.png" alt="blured woman on the massage table">
+
+						<picture>
+							<source srcset="images/services-blurred-woman-desktop.png" media="(min-width: 769px)">
+							<source srcset="images/services-blurred-woman-768w.png" media="(min-width: 376px)">
+							<source srcset="images/services-blurred-woman-375w.png" media="(max-width: 375px)">
+							<img src="images/services-blurred-woman-desktop.png" alt="blured woman on the massage table">
+						</picture>						
 					</div>					
 				</div>
 
@@ -112,62 +147,98 @@
 					<div id="services">
 
 						<div class="service-wrap">
-							<img src="images/services/anti-cellulite.png" class="service-img" alt="anti-cellulite massage photo">
+							<picture>
+								<source srcset="images/services/anti-cellulite.png" media="(min-width: 769px)">
+								<source srcset="images/services/anti-cellulite-768w.png" media="(min-width: 376px)">
+								<source srcset="images/services/anti-cellulite-375w.png" media="(max-width: 375px)">
+								<img src="images/services/anti-cellulite.png" class="service-img" alt="anti-cellulite massage photo">
+							</picture>
+							
 							<div class="service-description">
-								<h2> Антицеллюлитный</br> массаж</h2>
+								<h2 class="service-title"> Антицеллюлитный массаж</h2>
 								<p> Улучшает кровоснабжение, нормализует питание клеток и минимизирует жировые отложения.</p>
 								<p><span> 60 минут / 500 грн</span></p>
-								<a href="#" class="signup-button"> Записаться</a>				
+								<a data-src="#modal-form" class="signup-button modal-link"> Записаться</a>				
 							</div>							
 						</div>
 
 						<div class="service-wrap">
-							<img src="images/services/honey-massage.png" class="service-img" alt="honey-massage photo">
+							<picture>
+								<source srcset="images/services/honey-massage.png" media="(min-width: 769px)">
+								<source srcset="images/services/honey-massage-768w.png" media="(min-width: 376px)">
+								<source srcset="images/services/honey-massage-375w.png" media="(max-width: 375px)">
+								<img src="images/services/honey-massage.png" class="service-img" alt="honey-massage photo">
+							</picture>
+
 							<div class="service-description">
-								<h2> медовый</br> массаж</h2>
-								<p> Эффективно очищает кожу, повышает ее упругость и эластичность, абсорбирует токсины.</p>
+								<h2 class="service-title"> медовый массаж</h2>
+								<p class="increased-margin"> Эффективно очищает кожу, повышает ее упругость и эластичность, абсорбирует токсины.</p>
 								<p><span> 30 минут / 400 грн</span></p>
-								<a href="#" class="signup-button"> Записаться</a>				
+								<a data-src="#modal-form" class="signup-button modal-link"> Записаться</a>				
 							</div>							
 						</div>
 
 						<div class="service-wrap">
-							<img src="images/services/vacuum-massage.png" class="service-img" alt="vacuum-massage photo">
+							<picture>
+								<source srcset="images/services/vacuum-massage.png" media="(min-width: 769px)">
+								<source srcset="images/services/vacuum-massage-768w.png" media="(min-width: 376px)">
+								<source srcset="images/services/vacuum-massage-375w.png" media="(max-width: 375px)">
+								<img src="images/services/vacuum-massage.png" class="service-img" alt="vacuum-massage photo">
+							</picture>
+
 							<div class="service-description">
-								<h2> вакуумный</br> массаж</h2>
+								<h2 class="service-title"> вакуумный массаж</h2>
 								<p> Улучшает состояние кожного покрова, увеличивает его упругость, а также активизирует обменные процессы.</p>
 								<p><span> 35 минут / 350 грн</span></p>
-								<a href="#" class="signup-button"> Записаться</a>				
+								<a data-src="#modal-form" class="signup-button modal-link"> Записаться</a>				
 							</div>							
 						</div>
 
 						<div class="service-wrap">
-							<img src="images/services/colling-massage.png" class="service-img" alt="colling-massage photo">
+							<picture>
+								<source srcset="images/services/cooling-massage.png" media="(min-width: 769px)">
+								<source srcset="images/services/cooling-massage-768w.png" media="(min-width: 376px)">
+								<source srcset="images/services/cooling-massage-375w.png" media="(max-width: 375px)">
+								<img src="images/services/cooling-massage.png" class="service-img" alt="cooling-massage photo">
+							</picture>
+
 							<div class="service-description">
-								<h2> охлаждающий </br> массаж</h2>
-								<p> Ускоряет процесс расщепления жиров и заставляет организм тратить больше энергии на поддержание температуры тела.</p>
+								<h2 class="service-title"> охлаждающий массаж</h2>
+								<p> Ускоряет процесс расщепления жиров, заставляет организм тратить больше энергии на поддержание температуры тела.</p>
 								<p><span> 60 минут / 500 грн</span></p>
-								<a href="#" class="signup-button"> Записаться</a>				
+								<a data-src="#modal-form" class="signup-button modal-link"> Записаться</a>				
 							</div>							
 						</div>
 
 						<div class="service-wrap">
-							<img src="images/services/lymphatic-drainage.png" class="service-img" alt="lymphatic-drainage massage photo">
+							<picture>
+								<source srcset="images/services/lymphatic-drainage.png" media="(min-width: 769px)">
+								<source srcset="images/services/lymphatic-drainage-768w.png" media="(min-width: 376px)">
+								<source srcset="images/services/lymphatic-drainage-375w.png" media="(max-width: 375px)">
+								<img src="images/services/lymphatic-drainage.png" class="service-img" alt="lymphatic-drainage massage photo">
+							</picture>
+
 							<div class="service-description">
-								<h2> лимфодренажный </br> массаж</h2>
+								<h2 class="service-title"> лимфодренажный массаж</h2>
 								<p> Улучшает контуры тела, уменьшает объёмы на животе, подчеркивает стройность ног и избавляет от целлюлита.</p>
 								<p><span> 60 минут / 550 грн</span></p>
-								<a href="#" class="signup-button"> Записаться</a>				
+								<a data-src="#modal-form" class="signup-button modal-link"> Записаться</a>				
 							</div>							
 						</div>
 
 						<div class="service-wrap">
-							<img src="images/services/spain-massage.png" class="service-img" alt="spain-massage photo">
+							<picture>
+								<source srcset="images/services/spain-massage.png" media="(min-width: 769px)">
+								<source srcset="images/services/spain-massage-768w.png" media="(min-width: 376px)">
+								<source srcset="images/services/spain-massage-375w.png" media="(max-width: 375px)">
+								<img src="images/services/spain-massage.png" class="service-img" alt="spain-massage photo">
+							</picture>
+
 							<div class="service-description">
-								<h2> испанский </br> массаж</h2>
-								<p> Корректирует проблемные участки тела, формирует эстетически красивую фигуру.</p>
+								<h2 class="service-title"> испанский массаж</h2>
+								<p class="increased-margin"> Корректирует проблемные участки тела, формирует эстетически красивую фигуру.</p>
 								<p><span> 60 минут / 500 грн</span></p>
-								<a href="#" class="signup-button"> Записаться</a>				
+								<a data-src="#modal-form" class="signup-button modal-link"> Записаться</a>				
 							</div>							
 						</div>						
 					</div>					
@@ -180,18 +251,18 @@
 
 				<!-- Background images -->
 				<img class="back-img" src="images/background/back-flowers-about.svg" id="back-flowers-about" alt="">
+				<img class="back-img" src="images/background/back-flowers-about2.svg" id="back-flowers-about2" alt="">
 
 				<div class="about-us">
 					<h1> Наши мастера</h1>
 						
 					<div id="our-employees">
-
 						<div class="person-wrapper">
 							<div class="photo-wrapper">
 								<img src="images/person/person-1.png" alt="Photo of the first employee">
 								<h2 class="title-span"> Health & Beauty</h2>
 							</div>
-							<p> Гончар </br>Наталья</p>						
+							<p> Гончар <br>Наталья</p>						
 						</div>
 
 						<div class="person-wrapper">
@@ -199,7 +270,7 @@
 								<img src="images/person/person-2.png" alt="Photo of the second employee">
 								<h2 class="title-span"> Health & Beauty</h2>
 							</div>
-							<p> Шахова </br>Инна</p>						
+							<p> Шахова <br>Инна</p>						
 						</div>
 
 						<div class="person-wrapper">
@@ -207,7 +278,7 @@
 								<img src="images/person/person-3.png" alt="Photo of the third employee">
 								<h2 class="title-span"> Health & Beauty</h2>
 							</div>
-							<p> Гусаковская </br>Яна</p>						
+							<p> Гусаковская <br>Яна</p>						
 						</div>
 
 						<div class="person-wrapper">
@@ -215,9 +286,75 @@
 								<img src="images/person/person-4.png" alt="Photo of the fourth employee">
 								<h2 class="title-span"> Health & Beauty</h2>
 							</div>
-							<p> Кочержинская </br>Яна</p>				
+							<p> Кочержинская <br>Яна</p>				
 						</div>
-					</div>					
+					</div>
+
+					<div id="owl-carousel-masters" class="owl-carousel">
+						<div class="carousel-masters-item">	
+							<div class="person-wrapper">
+								<div class="photo-wrapper">
+									<picture>
+										<source srcset="images/person/person-1.png" media="(min-width: 769px)">
+										<source srcset="images/person/person-1-768w.png" media="(min-width: 376px)">
+										<source srcset="images/person/person-1-375w.png" media="(max-width: 375px)">
+										<img src="images/person/person-1.png" alt="Photo of the first employee">
+									</picture>
+									
+									<h2 class="title-span"> Health & Beauty</h2>
+								</div>
+								<p> Гончар <br>Наталья</p>					
+							</div>
+						</div>
+
+						<div class="carousel-masters-item">	
+							<div class="person-wrapper">
+								<div class="photo-wrapper">
+									<picture>
+										<source srcset="images/person/person-2.png" media="(min-width: 769px)">
+										<source srcset="images/person/person-2-768w.png" media="(min-width: 376px)">
+										<source srcset="images/person/person-2-375w.png" media="(max-width: 375px)">
+										<img src="images/person/person-2.png" alt="Photo of the second employee">
+									</picture>
+
+									<h2 class="title-span"> Health & Beauty</h2>
+								</div>
+								<p> Шахова <br>Инна</p>						
+							</div>
+						</div>
+
+						<div class="carousel-masters-item">	
+							<div class="person-wrapper">
+								<div class="photo-wrapper">
+									<picture>
+										<source srcset="images/person/person-3.png" media="(min-width: 769px)">
+										<source srcset="images/person/person-3-768w.png" media="(min-width: 376px)">
+										<source srcset="images/person/person-3-375w.png" media="(max-width: 375px)">
+										<img src="images/person/person-3.png" alt="Photo of the third employee">
+									</picture>
+
+									<h2 class="title-span"> Health & Beauty</h2>
+								</div>
+								<p> Гусаковская <br>Яна</p>					
+							</div>
+						</div>
+
+						<div class="carousel-masters-item">	
+							<div class="person-wrapper">
+								<div class="photo-wrapper">
+									<picture>
+										<source srcset="images/person/person-4.png" media="(min-width: 769px)">
+										<source srcset="images/person/person-4-768w.png" media="(min-width: 376px)">
+										<source srcset="images/person/person-4-375w.png" media="(max-width: 375px)">
+										<img src="images/person/person-4.png" alt="Photo of the fourth employee">
+									</picture>
+
+									<h2 class="title-span"> Health & Beauty</h2>
+								</div>
+								<p> Кочержинская <br>Яна</p>				
+							</div>
+						</div>
+					</div>
 				</div>
 
 				<div class="about-us" id="faq-all-wrapper">
@@ -226,7 +363,7 @@
 					<!-- Video from youtube -->
 
 					<div id="faq-wrapper">
-						<iframe width="465" height="309" src="https://www.youtube.com/embed/hFM9V8W4IIw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>			
+						<iframe class="youtube-video" src="https://www.youtube.com/embed/hFM9V8W4IIw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>			
 
 						<div id="faq">
 							<div class="dropdown" onclick="dropAnswer()">
@@ -261,12 +398,44 @@
 				<div id="testimonials-wrapper">
 					<h1> Отзывы</h1>
 
-					<div id="owl-carousel-1" class="owl-carousel">
+					<div id="owl-carousel-testimonials" class="owl-carousel">
 
   						<div class="carousel-item">					
   							<div class="testimonial">
   								<div class="client-wrap">
-  									<img class="client-photo" src="images/testimonials/template-photo.svg" alt="template photo of client">
+									<img class="client-photo" src="images/testimonials/template-photo.svg" alt="template photo of client">
+  													
+  									<div class="client-name">
+  										<p class="testimonial-p">Ксения</p>
+  										<p class="testimonial-p">18.11.20</p>
+  									</div>							
+  								</div>
+
+  								<p> “Очень понравился подход и нацеленность на результат, уже по первому сеансу видно, что цель обязательно будет достигнута, и считаю в этом деле необходимо найти "своего" мастера, я его нашла!”</p>	
+  							</div>
+
+  							<!-- Desktop version -->
+  							<div class="b-a-photo-wrapper">
+  								<a href="images/testimonials/before-after.png" data-fancybox="before-after-photo"> <img id="before-photo" class="b-a-photo" src="images/testimonials/before-photo.png" alt="Woman legs before massages"></a>							
+  								<a href="images/testimonials/before-after.png" data-fancybox="before-after-photo"> <img id="after-photo" class="b-a-photo" src="images/testimonials/after-photo.png" alt="Woman legs after massages"></a>
+  								<p id="before-text" class="testimonial-p b-a-text">До</p>
+  								<p id="after-text" class="testimonial-p b-a-text">После</p>							
+  							</div>
+
+  							<!-- Mobile version -->
+  							<div class="b-a-photo-wrapper-mobile">
+  								<a href="images/testimonials/after-photo-375w.png" data-fancybox="before-after-photo"> <img id="before-photo" class="b-a-photo" src="images/testimonials/before-photo-375w.png" alt="Woman legs before massages"></a>						
+  								<a href="images/testimonials/after-photo-375w.png" data-fancybox="before-after-photo"> <img id="after-photo" class="b-a-photo" src="images/testimonials/after-photo-375w.png" alt="Woman legs after massages"></a>
+  								<p id="before-text" class="testimonial-p b-a-text">До</p>
+  								<p id="after-text" class="testimonial-p b-a-text">После</p>							
+  							</div>
+  						</div>
+
+  						<div class="carousel-item">					
+  							<div class="testimonial">
+  								<div class="client-wrap">					
+									<img class="client-photo" src="images/testimonials/template-photo.svg" alt="template photo of client">
+
   									<div class="client-name">
   										<p class="testimonial-p">Ксения</p>
   										<p class="testimonial-p">18.11.20</p>
@@ -277,18 +446,18 @@
   							</div>
 
   							<div class="b-a-photo-wrapper">
-  								<img id="before-photo" class="b-a-photo" src="images/testimonials/before-photo.png" alt="Woman legs before massages">
-  								<img id="after-photo" class="b-a-photo" src="images/testimonials/after-photo.png" alt="Woman legs after massages">
+  								<a href="images/testimonials/before-after.png" data-fancybox="before-after-photo"> <img id="before-photo" class="b-a-photo" src="images/testimonials/before-photo.png" alt="Woman legs before massages"></a>							
+  								<a href="images/testimonials/before-after.png" data-fancybox="before-after-photo"> <img id="after-photo" class="b-a-photo" src="images/testimonials/after-photo.png" alt="Woman legs after massages"></a>
   								<p id="before-text" class="testimonial-p b-a-text">До</p>
-  								<p id="after-text" class="testimonial-p b-a-text">После</p>
-  								<i id="increase-photo" class="fas fa-search-plus"></i>				
+  								<p id="after-text" class="testimonial-p b-a-text">После</p>							
   							</div>
   						</div>
 
   						<div class="carousel-item">					
   							<div class="testimonial">
   								<div class="client-wrap">
-  									<img class="client-photo" src="images/testimonials/template-photo.svg" alt="template photo of client">
+									<img class="client-photo" src="images/testimonials/template-photo.svg" alt="template photo of client">
+
   									<div class="client-name">
   										<p class="testimonial-p">Ксения</p>
   										<p class="testimonial-p">18.11.20</p>
@@ -299,18 +468,18 @@
   							</div>
 
   							<div class="b-a-photo-wrapper">
-  								<img id="before-photo" class="b-a-photo" src="images/testimonials/before-photo.png" alt="Woman legs before massages">
-  								<img id="after-photo" class="b-a-photo" src="images/testimonials/after-photo.png" alt="Woman legs after massages">
+  								<a href="images/testimonials/before-after.png" data-fancybox="before-after-photo"> <img id="before-photo" class="b-a-photo" src="images/testimonials/before-photo.png" alt="Woman legs before massages"></a>							
+  								<a href="images/testimonials/before-after.png" data-fancybox="before-after-photo"> <img id="after-photo" class="b-a-photo" src="images/testimonials/after-photo.png" alt="Woman legs after massages"></a>
   								<p id="before-text" class="testimonial-p b-a-text">До</p>
-  								<p id="after-text" class="testimonial-p b-a-text">После</p>
-  								<i id="increase-photo" class="fas fa-search-plus"></i>				
+  								<p id="after-text" class="testimonial-p b-a-text">После</p>							
   							</div>
   						</div>
 
   						<div class="carousel-item">					
   							<div class="testimonial">
-  								<div class="client-wrap">
-  									<img class="client-photo" src="images/testimonials/template-photo.svg" alt="template photo of client">
+  								<div class="client-wrap">					
+									<img class="client-photo" src="images/testimonials/template-photo.svg" alt="template photo of client">
+
   									<div class="client-name">
   										<p class="testimonial-p">Ксения</p>
   										<p class="testimonial-p">18.11.20</p>
@@ -321,18 +490,18 @@
   							</div>
 
   							<div class="b-a-photo-wrapper">
-  								<img id="before-photo" class="b-a-photo" src="images/testimonials/before-photo.png" alt="Woman legs before massages">
-  								<img id="after-photo" class="b-a-photo" src="images/testimonials/after-photo.png" alt="Woman legs after massages">
+  								<a href="images/testimonials/before-after.png" data-fancybox="before-after-photo"> <img id="before-photo" class="b-a-photo" src="images/testimonials/before-photo.png" alt="Woman legs before massages"></a>							
+  								<a href="images/testimonials/before-after.png" data-fancybox="before-after-photo"> <img id="after-photo" class="b-a-photo" src="images/testimonials/after-photo.png" alt="Woman legs after massages"></a>							
   								<p id="before-text" class="testimonial-p b-a-text">До</p>
-  								<p id="after-text" class="testimonial-p b-a-text">После</p>
-  								<i id="increase-photo" class="fas fa-search-plus"></i>				
+  								<p id="after-text" class="testimonial-p b-a-text">После</p>							
   							</div>
   						</div>
 
   						<div class="carousel-item">					
   							<div class="testimonial">
-  								<div class="client-wrap">
-  									<img class="client-photo" src="images/testimonials/template-photo.svg" alt="template photo of client">
+  								<div class="client-wrap">					
+									<img class="client-photo" src="images/testimonials/template-photo.svg" alt="template photo of client">
+
   									<div class="client-name">
   										<p class="testimonial-p">Ксения</p>
   										<p class="testimonial-p">18.11.20</p>
@@ -342,34 +511,11 @@
   								<p> “Очень понравился подход и нацеленность на результат, уже по первому сеансу видно, что цель обязательно будет достигнута, и считаю в этом деле необходимо найти "своего" мастера, я его нашла!”</p>	
   							</div>
 
-  							<div class="b-a-photo-wrapper">
-  								<img id="before-photo" class="b-a-photo" src="images/testimonials/before-photo.png" alt="Woman legs before massages">
-  								<img id="after-photo" class="b-a-photo" src="images/testimonials/after-photo.png" alt="Woman legs after massages">
+  							<div class="b-a-photo-wrapper">					
+  								<a href="images/testimonials/before-after.png" data-fancybox="before-after-photo"> <img id="before-photo" class="b-a-photo" src="images/testimonials/before-photo.png" alt="Woman legs before massages"></a>							
+  								<a href="images/testimonials/before-after.png" data-fancybox="before-after-photo"> <img id="after-photo" class="b-a-photo" src="images/testimonials/after-photo.png" alt="Woman legs after massages"></a>
   								<p id="before-text" class="testimonial-p b-a-text">До</p>
-  								<p id="after-text" class="testimonial-p b-a-text">После</p>
-  								<i id="increase-photo" class="fas fa-search-plus"></i>				
-  							</div>
-  						</div>
-
-  						<div class="carousel-item">					
-  							<div class="testimonial">
-  								<div class="client-wrap">
-  									<img class="client-photo" src="images/testimonials/template-photo.svg" alt="template photo of client">
-  									<div class="client-name">
-  										<p class="testimonial-p">Ксения</p>
-  										<p class="testimonial-p">18.11.20</p>
-  									</div>							
-  								</div>
-
-  								<p> “Очень понравился подход и нацеленность на результат, уже по первому сеансу видно, что цель обязательно будет достигнута, и считаю в этом деле необходимо найти "своего" мастера, я его нашла!”</p>	
-  							</div>
-
-  							<div class="b-a-photo-wrapper">
-  								<img id="before-photo" class="b-a-photo" src="images/testimonials/before-photo.png" alt="Woman legs before massages">
-  								<img id="after-photo" class="b-a-photo" src="images/testimonials/after-photo.png" alt="Woman legs after massages">
-  								<p id="before-text" class="testimonial-p b-a-text">До</p>
-  								<p id="after-text" class="testimonial-p b-a-text">После</p>
-  								<i id="increase-photo" class="fas fa-search-plus"></i>				
+  								<p id="after-text" class="testimonial-p b-a-text">После</p>							
   							</div>
   						</div>
 					</div>
@@ -386,10 +532,10 @@
 				<img class="back-img" src="images/background/back-flowers-contacts.svg" id="back-flowers-contacts" alt="">
 
 				<div class="offer-wrapper">
-					<h1> Дарим скидку 50% на первое посещение!</h1>
+					<h1> Дарим скидку 50% <br>на первое посещение!</h1>
 					<p> Идеальный момент, чтобы познакомиться ближе с нашими мастерами и услугами!</p>
 					<p> Подготовьте себя к новому сезону и увидьте на весах желаемую цифру.</p>
-					<a href="#" class="signup-button"> Записаться</a>
+					<a data-src="#modal-form" class="signup-button modal-link"> Записаться</a>
 				</div>
 
 				<div id="contacts-wrapper">
@@ -398,29 +544,84 @@
 
 					<iframe id="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5080.605572182209!2d30.45588084939366!3d50.45408611862804!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4cc2a29c968cb%3A0xb292e6d9dc444af2!2z0YPQuy4g0JfQvtC-0LvQvtCz0LjRh9C10YHQutCw0Y8sIDQxLCDQmtC40LXQsiwgMDIwMDA!5e0!3m2!1sru!2sua!4v1617274303463!5m2!1sru!2sua" allowfullscreen="" loading="lazy"></iframe>
 
-
-					
-
-				</div>
-
-				
-			</div>		
-
-
-
+					<div class="contacts">
+						<h1> Наши контакты</h1>
+						<p class="contacts-title"> Телефон:</p> <a href="tel:+3805012345XX"><span class="contacts-text"> +38 050 123 45 67</span></a>
+						<p class="contacts-title"> Электронная почта:</p> <a href="mailto:health.beauty.mas@gmail.com"><span class="contacts-text"> health.beauty.mas@gmail.com</span></a>
+						<p class="contacts-title"> Адрес: <br><span class="contacts-text"> Киев, ул. Зоологическая, 41</span></p>
+						<p class="contacts-title"> Ближайшее метро: <br><span class="contacts-text"> «Политехнический институт»</span></p>
+						<p class="contacts-title"> Режим работы: <br><span class="contacts-text"> с 10:00 до 21:00, понедельник – воскресенье</span></p>
+					</div>
+				</div>				
+			</div>
 		</main>
 
+		<!-- Feedback form, hidden on main page-->
+		
+		<!-- Hidden frame for form responce -->
+		<iframe name="hidden_iframe" id="hidden_iframe" class="hide"></iframe>
+		
+		<form action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSeVg24coepmyG-EJ7FhG6XB8_tuUEHCYO_ie3Im2ERwCR1B1Q/formResponse" method="post" class="feedback-form" id="modal-form" accept-charset="utf-8" target="hidden_iframe" onsubmit="triggerClick(), $.fn.fancybox.close();">
+			<h2 class="form-title"> Форма обратной связи</h2>
+			
+			<label for="entry.2005620554" class="form-label"> Имя*</label>
+			<input type="text" name="entry.2005620554" class="form-field" placeholder="Введите ваше имя">
+			
+			<label for="entry.1166974658" class="form-label"> Номер телефона*</label>
+			<input type="text" name="entry.1166974658" class="form-field" placeholder="+38 (___) ___ __ __">
+			
+			<label for="entry.839337160" class="form-label"> Сообщение</label>
+			<textarea name="entry.839337160" class="form-field form-area"></textarea>
+			
+			<input type="submit" value="Записаться" class="signup-button form-button" id="form-submit"/>
+
+			<p class="form-span"> Health & Beauty</p>			
+		</form>
 
 
+		<!-- Hidden link -->
+		<a data-src="#submit-form" class="modal-link hide" id="hidden-modal-link"></a>
+
+		<div class="feedback-form" id="submit-form">
+			<h2 class="form-title"> Спасибо, ваша заявка успешно отправлена!</h2>
+			<p class="submit-form-p"> В ближайшее время мы свяжемся с Вами для уточнения деталей.</p>
+			<a class="signup-button submit-form-btn" onclick="$.fancybox.close()"> Вернуться на сайт</a>			
+
+			<p class="form-span"> Health & Beauty</div>			
+		</form>
+
+		<footer>
+			<div class="footer-wrapper">
+				
+				<div class="nav-wrapper">
+					<a href="#" id="link-to-start"><img src="images/lotus-logo-footer.svg" alt="white-lotus-logo"></a>
+					<nav class="footer-nav">
+						<ul id="site-nav-list-foot">							
+							<li class="nav-list" id="nav-services-foot"><a class="nav-link" href="#services-wrapper" onmouseover="changeMarginServFoot()" onmouseout="rechangeMarginServFoot()"> Услуги</a></li>
+							<li class="nav-list" id="nav-about-foot"><a class="nav-link" href="#about-us-wrapper" onmouseover="changeMarginAboutFoot()" onmouseout="rechangeMarginAboutFoot()"> О нас</a></li>
+							<li class="nav-list" id="nav-testimonials-foot"><a class="nav-link" href="#testimonials-wrapper" onmouseover="changeMarginRewFoot()" onmouseout="rechangeMarginRewFoot()"> Отзывы</a></li>	
+						</ul>						
+					</nav>
+
+					<div class="social-wrapper">
+						<ul>
+							<li> <a href="https://www.instagram.com/" class="social-link"> <i class="fab fa-instagram"></i> </a></li>							
+							<li> <a href="https://www.vk.com/" class="social-link"> <i class="fab fa-vk"></i> </a></li>
+							<li> <a href="https://www.facebook.com/" class="social-link"> <i class="fab fa-facebook-square"></i> </a></li>
+						</ul>					
+					</div>											
+				</div>
+			</div>			
+		</footer>
 
 	<!--  Scroll up button-->
 	<a href="#" class="scrollup"></a>
 	
 	<!-- Connect scripts -->
 	<script src="js/jquery.min.js"></script>
-	<script src="js/aos.js"></script>
+	<script src="js/jquery.fancybox.min.js"></script>
 	<script src="js/owl.carousel.min.js"></script>	
-	<script src="js/main.js"></script>	
+	<script src="js/main.js"></script>		
 
 	</body>
 </html>
