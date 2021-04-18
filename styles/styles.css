@@ -1615,9 +1615,9 @@ a:active  {
 
     /*Contacts*/
 
-    #back-flowers-contacts {
-        display: none;
-        top: 0;
+    #back-flowers-contacts2 {
+        display: block;
+        top: 370px;
         right: 0;
     }
 
