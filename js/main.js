@@ -29,6 +29,18 @@ $('[data-fancybox="before-after-photo"]').fancybox({
     fitToView: true,       
 });
 
+$('[data-fancybox="before-after-photo-mobile"]').fancybox({    
+    smallBtn: true,
+    animationEffect: "zoom-in-out",
+    animationDuration: 600,
+    clickSlide: "close",
+    arrows: false,
+    infobar: false,
+    fitToView: true,
+    'width': 300,
+    'height': 250,       
+});
+
 $('.modal-link').fancybox({ 
     animationEffect: "fade",
     animationDuration: 600,
@@ -112,19 +124,23 @@ function rechangeMarginNumber() {
 
 // Scroll up button
 
-$(document).ready(function(){ 
-  $(window).scroll(function(){
-    if ($(this).scrollTop() > 100) {
-    $('.scrollup').fadeIn();
-  } else {
-    $('.scrollup').fadeOut();
-  }
-  }); 
+$(document).ready(function() { 
+  $(window).scroll(function() {
+    var browserMinWidth = parseInt($('.header-wrapper').css('width'), 10);
+
+    if (browserMinWidth > 768) {
+        if ($(this).scrollTop() > 100) {
+            $('.scrollup').fadeIn();
+        } else {
+            $('.scrollup').fadeOut();
+        }
+        }
+    });
  
-  $('.scrollup').click(function(){
-    $("html, body").animate({ scrollTop: 0 }, 600);
-    return false;
-  });
+    $('.scrollup').click(function(){
+        $("html, body").animate({ scrollTop: 0 }, 600);
+        return false;
+    });
 })
 //
 
