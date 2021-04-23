@@ -18,17 +18,6 @@
 	<body>
 		<!-- Site header -->
 
-
-
-<!--  Check necessity classes and id-->
-<!-- Replace img with picture -->
-
-
-
-
-
-
-
 		<header>
 			<div class="header-wrapper">
 				
@@ -48,14 +37,26 @@
 					</nav>										
 				</div>
 
+				<!-- Nav bar for ipad version (768w) -->
+				<div class="nav-wrapper" id="nav-wrapper-768w">
 
+					<a class="nav-link" id="bars-btn" href="javascript:void(0);" onclick="togglingNavbar()"><i class="fas fa-bars"></i></a>
 
+					<nav class="top-nav" id="site-nav-mobile-768w">		
+						<ul id="site-nav-list-head-mobile">			
+							<li class="nav-list-mobile"><a class="nav-link" href="#services-wrapper" onclick="togglingNavbar()"> Услуги</a></li>
+							<li class="nav-list-mobile"><a class="nav-link" href="#about-us-wrapper" onclick="togglingNavbar()"> О нас</a></li>
+							<li class="nav-list-mobile"><a class="nav-link" href="#testimonials-wrapper" onclick="togglingNavbar()"> Отзывы</a></li>
+							<li class="nav-list-mobile"><a class="nav-link" href="#contacts-wrapper" onclick="togglingNavbar()"> Контакты</a></li>
+						</ul>
+					</nav>
 
+					<a class="nav-link" id="location" href="#map"> Киев</a>
+					<img class="logo" id="logo-header" src="images/lotus-logo.svg" alt="lotus-logo">
+					<a class="nav-link" href="tel:+3805012345XX" onmouseover="changeMarginNumber()" onmouseout="rechangeMarginNumber()"> +38 (050) 123 45 67</a>						
+				</div>
 
-
-
-
-				<!-- Nav bar for mobile version -->
+				<!-- Nav bar for mobile version (414w)-->
 				<div class="nav-wrapper" id="nav-wrapper-mobile">
 					<img class="logo" src="images/lotus-logo.svg" alt="lotus-logo">
 					<a class="nav-link" id="location" href="#map"> Киев</a>
@@ -63,10 +64,10 @@
 					
 					<nav class="top-nav" id="site-nav-mobile">		
 						<ul id="site-nav-list-head-mobile">			
-							<li class="nav-list-mobile" id="nav-services"><a class="nav-link" href="#services-wrapper" onmouseover="changeMarginServ()" onmouseout="rechangeMarginServ()"> Услуги</a></li>
-							<li class="nav-list-mobile" id="nav-about"><a class="nav-link" href="#about-us-wrapper" onmouseover="changeMarginAbout()" onmouseout="rechangeMarginAbout()"> О нас</a></li>
-							<li class="nav-list-mobile" id="nav-testimonials"><a class="nav-link" href="#testimonials-wrapper" onmouseover="changeMarginRew()" onmouseout="rechangeMarginRew()"> Отзывы</a></li>
-							<li class="nav-list-mobile" id="nav-contacts"><a class="nav-link" href="#contacts-wrapper" onmouseover="changeMarginCont()" onmouseout="rechangeMarginCont()"> Контакты</a></li>
+							<li class="nav-list-mobile"><a class="nav-link" href="#services-wrapper" onclick="togglingNavbar()"> Услуги</a></li>
+							<li class="nav-list-mobile"><a class="nav-link" href="#about-us-wrapper" onclick="togglingNavbar()"> О нас</a></li>
+							<li class="nav-list-mobile"><a class="nav-link" href="#testimonials-wrapper" onclick="togglingNavbar()"> Отзывы</a></li>
+							<li class="nav-list-mobile"><a class="nav-link" href="#contacts-wrapper" onclick="togglingNavbar()"> Контакты</a></li>
 							<ul class="mobile-messenger-list">
 								<li class="messenger-list"> <a href="viber://add?number=3805012345XX" class="messenger-link"> <i class="fab fa-viber viber-mobile"></i> </a></li>
 								<li class="messenger-list"> <a href="whatsapp://send?phone=+3805012345XX" class="messenger-link"> <i class="fab fa-whatsapp"></i> </a></li>
@@ -96,7 +97,8 @@
 
 				<picture class="main-frame-pic">
 					<source srcset="images/main-frame-photo.png" media="(min-width: 769px)">
-					<source srcset="images/main-frame-photo-768w.png" media="(min-width: 376px)">
+					<source srcset="images/main-frame-photo-768w.png" media="(min-width: 415px)">
+					<source srcset="images/main-frame-photo-414w.png" media="(min-width: 376px)">
 					<source srcset="images/main-frame-photo-375w.png" media="(max-width: 375px)">
 					<img src="images/main-frame-photo.png" alt="girl relaxing with massage">				
 				</picture>
@@ -123,6 +125,10 @@
 				<img class="back-img" src="images/background/back-flowers-serv4.svg" id="back-flowers-serv4" alt="">
 				<img class="back-img" src="images/background/back-flowers-serv5.svg" id="back-flowers-serv5" alt="">
 				<img class="back-img" src="images/background/services-back2.svg" id="services-back2" alt="">
+				<img class="back-img" src="images/background/services-back4.svg" id="services-back4" alt="">				
+				<img class="back-img" src="images/background/services-back3.svg" id="services-back3" alt="">
+				<img class="back-img" src="images/background/back-flowers-serv6.svg" id="back-flowers-serv6" alt="">
+				<img class="back-img" src="images/background/back-flowers-serv7.svg" id="back-flowers-serv7" alt="">
 
 				<div id="services-introduction-wrapper">
 					<h1> Время привести себя в порядок!</h1>
@@ -134,8 +140,8 @@
 
 						<picture>
 							<source srcset="images/services-blurred-woman-desktop.png" media="(min-width: 769px)">
-							<source srcset="images/services-blurred-woman-768w.png" media="(min-width: 376px)">
-							<source srcset="images/services-blurred-woman-375w.png" media="(max-width: 375px)">
+							<source srcset="images/services-blurred-woman-768w.png" media="(min-width: 415px)">
+							<source srcset="images/services-blurred-woman-375w.png" media="(max-width: 414px)">
 							<img src="images/services-blurred-woman-desktop.png" alt="blured woman on the massage table">
 						</picture>						
 					</div>					
@@ -149,8 +155,8 @@
 						<div class="service-wrap">
 							<picture>
 								<source srcset="images/services/anti-cellulite.png" media="(min-width: 769px)">
-								<source srcset="images/services/anti-cellulite-768w.png" media="(min-width: 376px)">
-								<source srcset="images/services/anti-cellulite-375w.png" media="(max-width: 375px)">
+								<source srcset="images/services/anti-cellulite-768w.png" media="(min-width: 415px)">
+								<source srcset="images/services/anti-cellulite-375w.png" media="(max-width: 414px)">
 								<img src="images/services/anti-cellulite.png" class="service-img" alt="anti-cellulite massage photo">
 							</picture>
 							
@@ -165,8 +171,8 @@
 						<div class="service-wrap">
 							<picture>
 								<source srcset="images/services/honey-massage.png" media="(min-width: 769px)">
-								<source srcset="images/services/honey-massage-768w.png" media="(min-width: 376px)">
-								<source srcset="images/services/honey-massage-375w.png" media="(max-width: 375px)">
+								<source srcset="images/services/honey-massage-768w.png" media="(min-width: 415px)">
+								<source srcset="images/services/honey-massage-375w.png" media="(max-width: 414px)">
 								<img src="images/services/honey-massage.png" class="service-img" alt="honey-massage photo">
 							</picture>
 
@@ -181,14 +187,14 @@
 						<div class="service-wrap">
 							<picture>
 								<source srcset="images/services/vacuum-massage.png" media="(min-width: 769px)">
-								<source srcset="images/services/vacuum-massage-768w.png" media="(min-width: 376px)">
-								<source srcset="images/services/vacuum-massage-375w.png" media="(max-width: 375px)">
+								<source srcset="images/services/vacuum-massage-768w.png" media="(min-width: 415px)">
+								<source srcset="images/services/vacuum-massage-375w.png" media="(max-width: 414px)">
 								<img src="images/services/vacuum-massage.png" class="service-img" alt="vacuum-massage photo">
 							</picture>
 
 							<div class="service-description">
 								<h2 class="service-title"> вакуумный массаж</h2>
-								<p> Улучшает состояние кожного покрова, увеличивает его упругость, а также активизирует обменные процессы.</p>
+								<p class="increased-margin"> Улучшает состояние кожного покрова, увеличивает его упругость, а также активизирует обменные процессы.</p>
 								<p><span> 35 минут / 350 грн</span></p>
 								<a data-src="#modal-form" class="signup-button modal-link"> Записаться</a>				
 							</div>							
@@ -197,8 +203,8 @@
 						<div class="service-wrap">
 							<picture>
 								<source srcset="images/services/cooling-massage.png" media="(min-width: 769px)">
-								<source srcset="images/services/cooling-massage-768w.png" media="(min-width: 376px)">
-								<source srcset="images/services/cooling-massage-375w.png" media="(max-width: 375px)">
+								<source srcset="images/services/cooling-massage-768w.png" media="(min-width: 415px)">
+								<source srcset="images/services/cooling-massage-375w.png" media="(max-width: 414px)">
 								<img src="images/services/cooling-massage.png" class="service-img" alt="cooling-massage photo">
 							</picture>
 
@@ -213,8 +219,8 @@
 						<div class="service-wrap">
 							<picture>
 								<source srcset="images/services/lymphatic-drainage.png" media="(min-width: 769px)">
-								<source srcset="images/services/lymphatic-drainage-768w.png" media="(min-width: 376px)">
-								<source srcset="images/services/lymphatic-drainage-375w.png" media="(max-width: 375px)">
+								<source srcset="images/services/lymphatic-drainage-768w.png" media="(min-width: 415px)">
+								<source srcset="images/services/lymphatic-drainage-375w.png" media="(max-width: 414px)">
 								<img src="images/services/lymphatic-drainage.png" class="service-img" alt="lymphatic-drainage massage photo">
 							</picture>
 
@@ -229,8 +235,8 @@
 						<div class="service-wrap">
 							<picture>
 								<source srcset="images/services/spain-massage.png" media="(min-width: 769px)">
-								<source srcset="images/services/spain-massage-768w.png" media="(min-width: 376px)">
-								<source srcset="images/services/spain-massage-375w.png" media="(max-width: 375px)">
+								<source srcset="images/services/spain-massage-768w.png" media="(min-width: 415px)">
+								<source srcset="images/services/spain-massage-375w.png" media="(max-width: 414px)">
 								<img src="images/services/spain-massage.png" class="service-img" alt="spain-massage photo">
 							</picture>
 
@@ -252,6 +258,7 @@
 				<!-- Background images -->
 				<img class="back-img" src="images/background/back-flowers-about.svg" id="back-flowers-about" alt="">
 				<img class="back-img" src="images/background/back-flowers-about2.svg" id="back-flowers-about2" alt="">
+				<img class="back-img" src="images/background/back-flowers-about3.svg" id="back-flowers-about3" alt="">
 
 				<div class="about-us">
 					<h1> Наши мастера</h1>
@@ -296,8 +303,8 @@
 								<div class="photo-wrapper">
 									<picture>
 										<source srcset="images/person/person-1.png" media="(min-width: 769px)">
-										<source srcset="images/person/person-1-768w.png" media="(min-width: 376px)">
-										<source srcset="images/person/person-1-375w.png" media="(max-width: 375px)">
+										<source srcset="images/person/person-1-768w.png" media="(min-width: 415px)">
+										<source srcset="images/person/person-1-375w.png" media="(max-width: 414px)">
 										<img src="images/person/person-1.png" alt="Photo of the first employee">
 									</picture>
 									
@@ -312,8 +319,8 @@
 								<div class="photo-wrapper">
 									<picture>
 										<source srcset="images/person/person-2.png" media="(min-width: 769px)">
-										<source srcset="images/person/person-2-768w.png" media="(min-width: 376px)">
-										<source srcset="images/person/person-2-375w.png" media="(max-width: 375px)">
+										<source srcset="images/person/person-2-768w.png" media="(min-width: 415px)">
+										<source srcset="images/person/person-2-375w.png" media="(max-width: 414px)">
 										<img src="images/person/person-2.png" alt="Photo of the second employee">
 									</picture>
 
@@ -328,8 +335,8 @@
 								<div class="photo-wrapper">
 									<picture>
 										<source srcset="images/person/person-3.png" media="(min-width: 769px)">
-										<source srcset="images/person/person-3-768w.png" media="(min-width: 376px)">
-										<source srcset="images/person/person-3-375w.png" media="(max-width: 375px)">
+										<source srcset="images/person/person-3-768w.png" media="(min-width: 415px)">
+										<source srcset="images/person/person-3-375w.png" media="(max-width: 414px)">
 										<img src="images/person/person-3.png" alt="Photo of the third employee">
 									</picture>
 
@@ -344,8 +351,8 @@
 								<div class="photo-wrapper">
 									<picture>
 										<source srcset="images/person/person-4.png" media="(min-width: 769px)">
-										<source srcset="images/person/person-4-768w.png" media="(min-width: 376px)">
-										<source srcset="images/person/person-4-375w.png" media="(max-width: 375px)">
+										<source srcset="images/person/person-4-768w.png" media="(min-width: 415px)">
+										<source srcset="images/person/person-4-375w.png" media="(max-width: 414px)">
 										<img src="images/person/person-4.png" alt="Photo of the fourth employee">
 									</picture>
 
@@ -416,18 +423,26 @@
 
   							<!-- Desktop version -->
   							<div class="b-a-photo-wrapper">
-  								<a href="images/testimonials/before-after.png" data-fancybox="before-after-photo"> <img id="before-photo" class="b-a-photo" src="images/testimonials/before-photo.png" alt="Woman legs before massages"></a>							
-  								<a href="images/testimonials/before-after.png" data-fancybox="before-after-photo"> <img id="after-photo" class="b-a-photo" src="images/testimonials/after-photo.png" alt="Woman legs after massages"></a>
-  								<p id="before-text" class="testimonial-p b-a-text">До</p>
-  								<p id="after-text" class="testimonial-p b-a-text">После</p>							
+  								<a href="images/testimonials/before-after.png" data-fancybox="before-after-photo"> <img class="b-a-photo before-photo" src="images/testimonials/before-photo.png" alt="Woman legs before massages"></a>							
+  								<a href="images/testimonials/before-after.png" data-fancybox="before-after-photo"> <img class="b-a-photo after-photo" src="images/testimonials/after-photo.png" alt="Woman legs after massages"></a>
+  								<p class="testimonial-p b-a-text before-text">До</p>
+  								<p class="testimonial-p b-a-text after-text">После</p>	
+  							</div>
+
+  							<!-- 768w version -->
+  							<div class="b-a-photo-wrapper-768w">
+  								<a href="images/testimonials/before-after.png" data-fancybox="before-after-photo"> <img class="b-a-photo before-photo" src="images/testimonials/before-photo-768w.png" alt="Woman legs before massages"></a>							
+  								<a href="images/testimonials/before-after.png" data-fancybox="before-after-photo"> <img class="b-a-photo after-photo" src="images/testimonials/after-photo-768w.png" alt="Woman legs after massages"></a>
+  								<p class="testimonial-p b-a-text before-text">До</p>
+  								<p class="testimonial-p b-a-text after-text">После</p>	
   							</div>
 
   							<!-- Mobile version -->
   							<div class="b-a-photo-wrapper-mobile">
-  								<a href="images/testimonials/after-photo-375w.png" data-fancybox="before-after-photo-mobile"> <img id="before-photo" class="b-a-photo" src="images/testimonials/before-photo-375w.png" alt="Woman legs before massages"></a>						
-  								<a href="images/testimonials/after-photo-375w.png" data-fancybox="before-after-photo-mobile"> <img id="after-photo" class="b-a-photo" src="images/testimonials/after-photo-375w.png" alt="Woman legs after massages"></a>
-  								<p id="before-text" class="testimonial-p b-a-text">До</p>
-  								<p id="after-text" class="testimonial-p b-a-text">После</p>
+  								<a href="images/testimonials/before-after.png" data-fancybox="before-after-photo"> <img class="b-a-photo before-photo" src="images/testimonials/before-photo-375w.png" alt="Woman legs before massages"></a>							
+  								<a href="images/testimonials/before-after.png" data-fancybox="before-after-photo"> <img class="b-a-photo after-photo" src="images/testimonials/after-photo-375w.png" alt="Woman legs after massages"></a>
+  								<p class="testimonial-p b-a-text before-text">До</p>
+  								<p class="testimonial-p b-a-text after-text">После</p>
   							</div>
   						</div>
 
@@ -447,18 +462,26 @@
 
   							<!-- Desktop version -->
   							<div class="b-a-photo-wrapper">
-  								<a href="images/testimonials/before-after.png" data-fancybox="before-after-photo"> <img id="before-photo" class="b-a-photo" src="images/testimonials/before-photo.png" alt="Woman legs before massages"></a>							
-  								<a href="images/testimonials/before-after.png" data-fancybox="before-after-photo"> <img id="after-photo" class="b-a-photo" src="images/testimonials/after-photo.png" alt="Woman legs after massages"></a>
-  								<p id="before-text" class="testimonial-p b-a-text">До</p>
-  								<p id="after-text" class="testimonial-p b-a-text">После</p>							
+  								<a href="images/testimonials/before-after.png" data-fancybox="before-after-photo"> <img class="b-a-photo before-photo" src="images/testimonials/before-photo.png" alt="Woman legs before massages"></a>							
+  								<a href="images/testimonials/before-after.png" data-fancybox="before-after-photo"> <img class="b-a-photo after-photo" src="images/testimonials/after-photo.png" alt="Woman legs after massages"></a>
+  								<p class="testimonial-p b-a-text before-text">До</p>
+  								<p class="testimonial-p b-a-text after-text">После</p>	
+  							</div>
+
+  							<!-- 768w version -->
+  							<div class="b-a-photo-wrapper-768w">
+  								<a href="images/testimonials/before-after.png" data-fancybox="before-after-photo"> <img class="b-a-photo before-photo" src="images/testimonials/before-photo-768w.png" alt="Woman legs before massages"></a>							
+  								<a href="images/testimonials/before-after.png" data-fancybox="before-after-photo"> <img class="b-a-photo after-photo" src="images/testimonials/after-photo-768w.png" alt="Woman legs after massages"></a>
+  								<p class="testimonial-p b-a-text before-text">До</p>
+  								<p class="testimonial-p b-a-text after-text">После</p>	
   							</div>
 
   							<!-- Mobile version -->
   							<div class="b-a-photo-wrapper-mobile">
-  								<a href="images/testimonials/after-photo-375w.png" data-fancybox="before-after-photo-mobile"> <img id="before-photo" class="b-a-photo" src="images/testimonials/before-photo-375w.png" alt="Woman legs before massages"></a>						
-  								<a href="images/testimonials/after-photo-375w.png" data-fancybox="before-after-photo-mobile"> <img id="after-photo" class="b-a-photo" src="images/testimonials/after-photo-375w.png" alt="Woman legs after massages"></a>
-  								<p id="before-text" class="testimonial-p b-a-text">До</p>
-  								<p id="after-text" class="testimonial-p b-a-text">После</p>
+  								<a href="images/testimonials/before-after.png" data-fancybox="before-after-photo"> <img class="b-a-photo before-photo" src="images/testimonials/before-photo-375w.png" alt="Woman legs before massages"></a>							
+  								<a href="images/testimonials/before-after.png" data-fancybox="before-after-photo"> <img class="b-a-photo after-photo" src="images/testimonials/after-photo-375w.png" alt="Woman legs after massages"></a>
+  								<p class="testimonial-p b-a-text before-text">До</p>
+  								<p class="testimonial-p b-a-text after-text">После</p>
   							</div>
   						</div>
 
@@ -478,18 +501,26 @@
 
   							<!-- Desktop version -->
   							<div class="b-a-photo-wrapper">
-  								<a href="images/testimonials/before-after.png" data-fancybox="before-after-photo"> <img id="before-photo" class="b-a-photo" src="images/testimonials/before-photo.png" alt="Woman legs before massages"></a>							
-  								<a href="images/testimonials/before-after.png" data-fancybox="before-after-photo"> <img id="after-photo" class="b-a-photo" src="images/testimonials/after-photo.png" alt="Woman legs after massages"></a>
-  								<p id="before-text" class="testimonial-p b-a-text">До</p>
-  								<p id="after-text" class="testimonial-p b-a-text">После</p>							
+  								<a href="images/testimonials/before-after.png" data-fancybox="before-after-photo"> <img class="b-a-photo before-photo" src="images/testimonials/before-photo.png" alt="Woman legs before massages"></a>							
+  								<a href="images/testimonials/before-after.png" data-fancybox="before-after-photo"> <img class="b-a-photo after-photo" src="images/testimonials/after-photo.png" alt="Woman legs after massages"></a>
+  								<p class="testimonial-p b-a-text before-text">До</p>
+  								<p class="testimonial-p b-a-text after-text">После</p>	
+  							</div>
+
+  							<!-- 768w version -->
+  							<div class="b-a-photo-wrapper-768w">
+  								<a href="images/testimonials/before-after.png" data-fancybox="before-after-photo"> <img class="b-a-photo before-photo" src="images/testimonials/before-photo-768w.png" alt="Woman legs before massages"></a>							
+  								<a href="images/testimonials/before-after.png" data-fancybox="before-after-photo"> <img class="b-a-photo after-photo" src="images/testimonials/after-photo-768w.png" alt="Woman legs after massages"></a>
+  								<p class="testimonial-p b-a-text before-text">До</p>
+  								<p class="testimonial-p b-a-text after-text">После</p>	
   							</div>
 
   							<!-- Mobile version -->
   							<div class="b-a-photo-wrapper-mobile">
-  								<a href="images/testimonials/after-photo-375w.png" data-fancybox="before-after-photo-mobile"> <img id="before-photo" class="b-a-photo" src="images/testimonials/before-photo-375w.png" alt="Woman legs before massages"></a>						
-  								<a href="images/testimonials/after-photo-375w.png" data-fancybox="before-after-photo-mobile"> <img id="after-photo" class="b-a-photo" src="images/testimonials/after-photo-375w.png" alt="Woman legs after massages"></a>
-  								<p id="before-text" class="testimonial-p b-a-text">До</p>
-  								<p id="after-text" class="testimonial-p b-a-text">После</p>
+  								<a href="images/testimonials/before-after.png" data-fancybox="before-after-photo"> <img class="b-a-photo before-photo" src="images/testimonials/before-photo-375w.png" alt="Woman legs before massages"></a>							
+  								<a href="images/testimonials/before-after.png" data-fancybox="before-after-photo"> <img class="b-a-photo after-photo" src="images/testimonials/after-photo-375w.png" alt="Woman legs after massages"></a>
+  								<p class="testimonial-p b-a-text before-text">До</p>
+  								<p class="testimonial-p b-a-text after-text">После</p>
   							</div>
   						</div>
 
@@ -509,18 +540,26 @@
 
   							<!-- Desktop version -->
   							<div class="b-a-photo-wrapper">
-  								<a href="images/testimonials/before-after.png" data-fancybox="before-after-photo"> <img id="before-photo" class="b-a-photo" src="images/testimonials/before-photo.png" alt="Woman legs before massages"></a>							
-  								<a href="images/testimonials/before-after.png" data-fancybox="before-after-photo"> <img id="after-photo" class="b-a-photo" src="images/testimonials/after-photo.png" alt="Woman legs after massages"></a>
-  								<p id="before-text" class="testimonial-p b-a-text">До</p>
-  								<p id="after-text" class="testimonial-p b-a-text">После</p>							
+  								<a href="images/testimonials/before-after.png" data-fancybox="before-after-photo"> <img class="b-a-photo before-photo" src="images/testimonials/before-photo.png" alt="Woman legs before massages"></a>							
+  								<a href="images/testimonials/before-after.png" data-fancybox="before-after-photo"> <img class="b-a-photo after-photo" src="images/testimonials/after-photo.png" alt="Woman legs after massages"></a>
+  								<p class="testimonial-p b-a-text before-text">До</p>
+  								<p class="testimonial-p b-a-text after-text">После</p>	
+  							</div>
+
+  							<!-- 768w version -->
+  							<div class="b-a-photo-wrapper-768w">
+  								<a href="images/testimonials/before-after.png" data-fancybox="before-after-photo"> <img class="b-a-photo before-photo" src="images/testimonials/before-photo-768w.png" alt="Woman legs before massages"></a>							
+  								<a href="images/testimonials/before-after.png" data-fancybox="before-after-photo"> <img class="b-a-photo after-photo" src="images/testimonials/after-photo-768w.png" alt="Woman legs after massages"></a>
+  								<p class="testimonial-p b-a-text before-text">До</p>
+  								<p class="testimonial-p b-a-text after-text">После</p>	
   							</div>
 
   							<!-- Mobile version -->
   							<div class="b-a-photo-wrapper-mobile">
-  								<a href="images/testimonials/after-photo-375w.png" data-fancybox="before-after-photo-mobile"> <img id="before-photo" class="b-a-photo" src="images/testimonials/before-photo-375w.png" alt="Woman legs before massages"></a>						
-  								<a href="images/testimonials/after-photo-375w.png" data-fancybox="before-after-photo-mobile"> <img id="after-photo" class="b-a-photo" src="images/testimonials/after-photo-375w.png" alt="Woman legs after massages"></a>
-  								<p id="before-text" class="testimonial-p b-a-text">До</p>
-  								<p id="after-text" class="testimonial-p b-a-text">После</p>
+  								<a href="images/testimonials/before-after.png" data-fancybox="before-after-photo"> <img class="b-a-photo before-photo" src="images/testimonials/before-photo-375w.png" alt="Woman legs before massages"></a>							
+  								<a href="images/testimonials/before-after.png" data-fancybox="before-after-photo"> <img class="b-a-photo after-photo" src="images/testimonials/after-photo-375w.png" alt="Woman legs after massages"></a>
+  								<p class="testimonial-p b-a-text before-text">До</p>
+  								<p class="testimonial-p b-a-text after-text">После</p>
   							</div>
   						</div>
 
@@ -540,20 +579,28 @@
 
   							<!-- Desktop version -->
   							<div class="b-a-photo-wrapper">
-  								<a href="images/testimonials/before-after.png" data-fancybox="before-after-photo"> <img id="before-photo" class="b-a-photo" src="images/testimonials/before-photo.png" alt="Woman legs before massages"></a>							
-  								<a href="images/testimonials/before-after.png" data-fancybox="before-after-photo"> <img id="after-photo" class="b-a-photo" src="images/testimonials/after-photo.png" alt="Woman legs after massages"></a>
-  								<p id="before-text" class="testimonial-p b-a-text">До</p>
-  								<p id="after-text" class="testimonial-p b-a-text">После</p>							
+  								<a href="images/testimonials/before-after.png" data-fancybox="before-after-photo"> <img class="b-a-photo before-photo" src="images/testimonials/before-photo.png" alt="Woman legs before massages"></a>							
+  								<a href="images/testimonials/before-after.png" data-fancybox="before-after-photo"> <img class="b-a-photo after-photo" src="images/testimonials/after-photo.png" alt="Woman legs after massages"></a>
+  								<p class="testimonial-p b-a-text before-text">До</p>
+  								<p class="testimonial-p b-a-text after-text">После</p>	
+  							</div>
+
+  							<!-- 768w version -->
+  							<div class="b-a-photo-wrapper-768w">
+  								<a href="images/testimonials/before-after.png" data-fancybox="before-after-photo"> <img class="b-a-photo before-photo" src="images/testimonials/before-photo-768w.png" alt="Woman legs before massages"></a>							
+  								<a href="images/testimonials/before-after.png" data-fancybox="before-after-photo"> <img class="b-a-photo after-photo" src="images/testimonials/after-photo-768w.png" alt="Woman legs after massages"></a>
+  								<p class="testimonial-p b-a-text before-text">До</p>
+  								<p class="testimonial-p b-a-text after-text">После</p>	
   							</div>
 
   							<!-- Mobile version -->
   							<div class="b-a-photo-wrapper-mobile">
-  								<a href="images/testimonials/after-photo-375w.png" data-fancybox="before-after-photo-mobile"> <img id="before-photo" class="b-a-photo" src="images/testimonials/before-photo-375w.png" alt="Woman legs before massages"></a>						
-  								<a href="images/testimonials/after-photo-375w.png" data-fancybox="before-after-photo-mobile"> <img id="after-photo" class="b-a-photo" src="images/testimonials/after-photo-375w.png" alt="Woman legs after massages"></a>
-  								<p id="before-text" class="testimonial-p b-a-text">До</p>
-  								<p id="after-text" class="testimonial-p b-a-text">После</p>
+  								<a href="images/testimonials/before-after.png" data-fancybox="before-after-photo"> <img class="b-a-photo before-photo" src="images/testimonials/before-photo-375w.png" alt="Woman legs before massages"></a>							
+  								<a href="images/testimonials/before-after.png" data-fancybox="before-after-photo"> <img class="b-a-photo after-photo" src="images/testimonials/after-photo-375w.png" alt="Woman legs after massages"></a>
+  								<p class="testimonial-p b-a-text before-text">До</p>
+  								<p class="testimonial-p b-a-text after-text">После</p>
   							</div>
-  						</div>  						
+  						</div>  												
 					</div>
 				</div>				
 			</div>
@@ -566,13 +613,15 @@
 
 				<picture>
 					<source srcset="images/background/contacts-back.png" media="(min-width: 769px)">
-					<source srcset="images/background/contacts-back-768w.png" media="(min-width: 376px)">
+					<source srcset="images/background/contacts-back-768w.png" media="(min-width: 415px)">
+					<source srcset="images/background/contacts-back-414w.png" media="(min-width: 376px)">
 					<source srcset="images/background/contacts-back-375w.png" media="(max-width: 375px)">
 					<img class="back-img" src="images/background/contacts-back.png" alt="cosmetic for massage">
 				</picture>
 				
 				<img class="back-img" src="images/background/back-flowers-contacts.svg" id="back-flowers-contacts" alt="">
 				<img class="back-img" src="images/background/back-flowers-contacts2.svg" id="back-flowers-contacts2" alt="">
+				<img class="back-img" src="images/background/back-flowers-contacts3.svg" id="back-flowers-contacts3" alt="">
 
 				<div class="offer-wrapper">
 					<h1> Дарим скидку 50% <br>на первое посещение!</h1>
@@ -604,7 +653,7 @@
 		<!-- Hidden frame for form responce -->
 		<iframe name="hidden_iframe" id="hidden_iframe" class="hide"></iframe>
 		
-		<form action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSeVg24coepmyG-EJ7FhG6XB8_tuUEHCYO_ie3Im2ERwCR1B1Q/formResponse" method="post" class="feedback-form" id="modal-form" accept-charset="utf-8" target="hidden_iframe" onsubmit="triggerClick(), $.fn.fancybox.close();">
+		<form action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSeVg24coepmyG-EJ7FhG6XB8_tuUEHCYO_ie3Im2ERwCR1B1Q/formResponse" method="post" class="feedback-form" id="modal-form" accept-charset="utf-8" target="hidden_iframe" onsubmit="triggerClick()">
 			<h2 class="form-title"> Форма обратной связи</h2>
 			
 			<label for="entry.2005620554" class="form-label"> Имя*</label>
@@ -630,7 +679,7 @@
 			<p class="submit-form-p"> В ближайшее время мы свяжемся с Вами для уточнения деталей.</p>
 			<a class="signup-button submit-form-btn" onclick="$.fancybox.close()"> Вернуться на сайт</a>			
 
-			<p class="form-span"> Health & Beauty</div>			
+			<p class="form-span form-span-submit"> Health & Beauty</div>			
 		</form>
 
 		<footer>

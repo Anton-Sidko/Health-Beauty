@@ -36,33 +36,40 @@ $('[data-fancybox="before-after-photo-mobile"]').fancybox({
     clickSlide: "close",
     arrows: false,
     infobar: false,
-    fitToView: true,
-    'width': 300,
-    'height': 250,       
+    fitToView: true,         
 });
 
 $('.modal-link').fancybox({ 
     animationEffect: "fade",
     animationDuration: 600,
-    'width': 790,
-    'height': 650,
-
 });
 
 // Sent message when form has been successfully sent and close modal form
 function triggerClick() {
-  $.fancybox.defaults.closeExisting = true;
-  $('#hidden-modal-link').trigger('click');
+    $.fancybox.defaults.closeExisting = true;
+    $('#hidden-modal-link').trigger('click');
 }
 
 // Keep position nav-list elements at nav-link:hover
 
 function changeMarginServ() {
-  document.getElementById('nav-services').style.marginLeft = '135.5px';
+    var browserMinWidth = parseInt($('.header-wrapper').css('width'), 10);
+
+    if (browserMinWidth > 1024) {
+        document.getElementById('nav-services').style.marginLeft = '135.5px';
+    } else if (browserMinWidth == 1024) {
+        document.getElementById('nav-services').style.marginLeft = '41.5px';
+    }
 }
 
 function rechangeMarginServ() {
-  document.getElementById('nav-services').style.marginLeft = '144px';
+   var browserMinWidth = parseInt($('.header-wrapper').css('width'), 10);
+
+    if (browserMinWidth > 1024) {
+        document.getElementById('nav-services').style.marginLeft = '144px';
+    } else if (browserMinWidth == 1024) {
+        document.getElementById('nav-services').style.marginLeft = '50px';
+    }  
 }
 
 function changeMarginServFoot() {
@@ -74,11 +81,23 @@ function rechangeMarginServFoot() {
 }
 
 function changeMarginAbout() {
-  document.getElementById('nav-about').style.marginLeft = '61px';
+    var browserMinWidth = parseInt($('.header-wrapper').css('width'), 10);
+
+     if (browserMinWidth > 1024) {
+        document.getElementById('nav-about').style.marginLeft = '61px';
+    } else if (browserMinWidth == 1024) {
+        document.getElementById('nav-about').style.marginLeft = '43px';
+    }  
 }
 
 function rechangeMarginAbout() {
-  document.getElementById('nav-about').style.marginLeft = '68px';
+    var browserMinWidth = parseInt($('.header-wrapper').css('width'), 10);
+
+     if (browserMinWidth > 1024) {
+        document.getElementById('nav-about').style.marginLeft = '68px';
+    } else if (browserMinWidth == 1024) {
+        document.getElementById('nav-about').style.marginLeft = '50px';
+    }  
 }
 
 function changeMarginAboutFoot() {
@@ -90,11 +109,23 @@ function rechangeMarginAboutFoot() {
 }
 
 function changeMarginRew() {
-  document.getElementById('nav-testimonials').style.marginLeft = '58px';
+    var browserMinWidth = parseInt($('.header-wrapper').css('width'), 10);
+
+     if (browserMinWidth > 1024) {
+        document.getElementById('nav-testimonials').style.marginLeft = '58px';
+    } else if (browserMinWidth == 1024) {
+        document.getElementById('nav-testimonials').style.marginLeft = '40px';
+    }  
 }
 
 function rechangeMarginRew() {
-  document.getElementById('nav-testimonials').style.marginLeft = '68px';
+    var browserMinWidth = parseInt($('.header-wrapper').css('width'), 10);
+
+     if (browserMinWidth > 1024) {
+        document.getElementById('nav-testimonials').style.marginLeft = '68px';
+    } else if (browserMinWidth == 1024) {
+        document.getElementById('nav-testimonials').style.marginLeft = '50px';
+    } 
 }
 
 function changeMarginRewFoot() {
@@ -106,19 +137,48 @@ function rechangeMarginRewFoot() {
 }
 
 function changeMarginCont() {
-  document.getElementById('nav-contacts').style.marginLeft = '56px';
+    var browserMinWidth = parseInt($('.header-wrapper').css('width'), 10);
+
+     if (browserMinWidth > 1024) {
+        document.getElementById('nav-contacts').style.marginLeft = '56px';
+    } else if (browserMinWidth == 1024) {
+       document.getElementById('nav-contacts').style.marginLeft = '38px';
+    }  
 }
 
 function rechangeMarginCont() {
-  document.getElementById('nav-contacts').style.marginLeft = '68px';
+    var browserMinWidth = parseInt($('.header-wrapper').css('width'), 10);
+
+     if (browserMinWidth > 1024) {
+        document.getElementById('nav-contacts').style.marginLeft = '68px';
+    } else if (browserMinWidth == 1024) {
+       document.getElementById('nav-contacts').style.marginLeft = '50px';
+    }
 }
 
 function changeMarginNumber() {
-  document.getElementById('phone-number').style.marginLeft = '90px';
+    var browserMinWidth = parseInt($('.header-wrapper').css('width'), 10);
+    
+    if (browserMinWidth >= 1280) {        
+        document.getElementById('phone-number').style.marginLeft = '90px';
+    } else if (browserMinWidth == 1024) {
+        document.getElementById('phone-number').style.marginLeft = '51px';
+    } else if (browserMinWidth == 768) {
+        document.getElementById('logo-header').style.marginRight = '173px';
+    }
+
 }
 
 function rechangeMarginNumber() {
-  document.getElementById('phone-number').style.marginLeft = '109px';
+    var browserMinWidth = parseInt($('.header-wrapper').css('width'), 10);    
+    
+    if (browserMinWidth >= 1280) {
+        document.getElementById('phone-number').style.marginLeft = '109px';
+    } else if (browserMinWidth == 1024) {
+        document.getElementById('phone-number').style.marginLeft = '70px';
+    } else if (browserMinWidth == 768) {
+        document.getElementById('logo-header').style.marginRight = '192px';
+    }    
 }
 // 
 
@@ -128,12 +188,12 @@ $(document).ready(function() {
   $(window).scroll(function() {
     var browserMinWidth = parseInt($('.header-wrapper').css('width'), 10);
 
-    if (browserMinWidth > 768) {
+    if (browserMinWidth > 700) {
         if ($(this).scrollTop() > 100) {
             $('.scrollup').fadeIn();
         } else {
             $('.scrollup').fadeOut();
-        }
+            }
         }
     });
  
@@ -250,11 +310,22 @@ document.onclick = function() {
 // Toggling nav-bar
 
 function togglingNavbar() {
-    var x = document.getElementById("site-nav-mobile");
-    if (x.className === "topnav") {
-        x.className += " toggle-nav-bar";
+    var browserMinWidth = parseInt($('.header-wrapper').css('width'), 10);
+    var navBar = document.getElementById("site-nav-mobile-768w");
+    var navBarMobile = document.getElementById("site-nav-mobile");
+
+    if (browserMinWidth > 414) {
+        if (navBar.className == "top-nav") {
+            navBar.className += " toggle-nav-bar";
+        } else {
+            navBar.className = "top-nav";
+        }
     } else {
-        x.className = "topnav";
+        if (navBarMobile.className == "top-nav") {
+            navBarMobile.className += " toggle-nav-bar";
+        } else {
+            navBarMobile.className = "top-nav";
+        }
     }
 } 
 // 
