@@ -1076,6 +1076,9 @@ a:active  {
     margin-top: 39px;
     border: none;
     cursor: pointer;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
 }
 
 .form-span {
