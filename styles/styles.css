@@ -2607,10 +2607,6 @@ a:active  {
     .form-span {
         display: none;
     }
-  
-    .feedback-form .signup-button {
-        padding: 19px 55px 19px 50px; 
-    }
 
     #submit-form {
         padding: 30px 25px 50px 25px; 
