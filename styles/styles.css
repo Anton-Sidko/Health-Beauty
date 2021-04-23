@@ -2002,6 +2002,7 @@ a:active  {
 
     .mobile-messenger-list {
         margin-top: 20px;
+        margin-left: 125px;
     }
 
     .logo {        
@@ -2644,6 +2645,10 @@ a:active  {
     #location {
         margin-left: 112px;        
     }
+  
+    .mobile-messenger-list {        
+        margin-left: 105px;
+    } 
 
     /* Services frame */
 
