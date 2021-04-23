@@ -2010,7 +2010,7 @@ a:active  {
     }    
 
     #location {
-        margin-left: 112px;
+        margin-left: 120px;
         margin-top: 20px;
     }
 
@@ -2639,7 +2639,11 @@ a:active  {
 
     #bars-btn {
         margin-left: 112px;             
-    }        
+    }
+  
+    #location {
+        margin-left: 112px;        
+    }
 
     /* Services frame */
 
